@@ -1,0 +1,30 @@
+{{ attach_library('almd/quicklinks') }}
+
+{# This component replaces the original Quicklinks and Article list.
+TODO: Write logic for displaying title with or without background color.
+See the original Article list on landing page sidebar. #}
+<article class="quicklinks{{ modifier ? ' ' ~ modifier : '' }}
+  {{- attributes ? ' ' ~ attributes.class -}}"
+  {{- attributes ? attributes|without(class) -}}>
+  {{ title_prefix }}
+  {{ title_suffix }}
+  {% if title %}
+    {% include "@atoms/title/title.twig" with {
+      "level": title.level,
+      "modifier": title.modifier,
+      "text": title.text,
+      "url": title.url,
+    } only %}
+  {% endif %}
+  <ul class="quicklinks__items">
+    {% block quicklinks %}
+      {% for item in items %}
+        <li class="quicklinks__item">
+          <a href="{{ item.url }}" class="quicklinks__link">
+            {{ item.text }}
+          </a>
+        </li>
+      {% endfor %}
+    {% endblock %}
+  </ul>
+</article>

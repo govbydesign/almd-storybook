@@ -1,0 +1,27 @@
+{{ attach_library('almd/alert') }}
+
+{# Coordinates the icon and background color to use depending on
+the type of alert. #}
+{% if type == 'scheduled' %}
+  {% set icon = 'fa-solid fa-gear' %}
+  {% set background = '#343d46' %}
+{% elseif type == 'emergency' %}
+  {% set icon = 'fa-solid fa-bullhorn' %}
+  {% set background = '#e74c3c' %}
+{% elseif type == 'outage' %}
+  {% set icon = 'fa-solid fa-wrench' %}
+  {% set background = '#343d46' %}
+{% else %}
+  {% set icon = 'fa-solid fa-info' %}
+  {% set background = '#955e3b' %}
+{% endif %}
+<article class="alert" style="background-color:{{ background }};">
+  <i class="alert__icon {{ icon }}"></i>
+  <a href="{{ url }}">
+    <p>{{ message }}
+      <span class="alert__read-more" style="display:inline-flex;line-height:center;">{{ 'Read more'|t }}
+        <i aria-hidden="true" class="fa-solid fa-chevron-right"></i>
+      </span>
+    </p>
+  </a>
+</article>

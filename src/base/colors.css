@@ -1,0 +1,25 @@
+:root {
+  /* Standard. */
+  --color-white: #fff;
+  --color-black: #1b2b34;
+
+  /* Primary. */
+  --color-primary: #23272b;
+  --color-secondary: #717478;
+  --color-tertiary: #bd8461;
+
+
+  /* Accent. */
+  --color-accent-one: #955e3b;
+  --color-accent-two: #c88b66;
+  --color-accent-three: #a7a7a7;
+  --color-accent-four: #dadada;
+  --color-accent-five: #e74c3c;
+
+  /* Grays. */
+  --color-gray: #343d46;
+  --color-gray-medium: #4f5b66;
+  --color-gray-light: #65737e;
+  --color-gray-lighter: #a7adba;
+  --color-gray-lightest: #e7e7e7;
+}

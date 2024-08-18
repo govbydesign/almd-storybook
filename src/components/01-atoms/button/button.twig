@@ -1,0 +1,20 @@
+{% if url %}
+  <a href="{{ url }}" class="button{{ modifier ? ' ' ~ modifier: '' }}">
+    {{ text }}
+    {# Using a twig block to be able to add an icon as needed. #}
+    {% if icon %}
+      <span aria-hidden="true">
+        <i class="{{ icon }}"></i>
+      </span>
+    {% endif %}
+  </a>
+{% else %}
+  <button class="button{{ modifier ? ' ' ~ modifier: '' }}">
+    {{ text }}
+    {% if icon %}
+      <span aria-hidden="true">
+        <i class="{{ icon }}"></i>
+      </span>
+    {% endif %}
+  </button>
+{% endif %}

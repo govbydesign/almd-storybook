@@ -1,0 +1,29 @@
+.content-card {
+  background-color: var(--color-white);
+  border-radius: 0 0 5px 5px;
+  border-top: 5px solid var(--color-accent-two);
+  box-shadow: var(--shadow-basic);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 4rem 2rem;
+
+  .title {
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .content-card__body {
+    margin-bottom: 2rem;
+  }
+
+  .content-card__cta {
+    margin-top: auto;
+  }
+
+  .al-label {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+}

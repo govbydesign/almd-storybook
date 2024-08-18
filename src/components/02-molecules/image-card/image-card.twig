@@ -1,0 +1,29 @@
+{{ attach_library('almd/image-card') }}
+
+{# This component replaces the original 'Image block' and 'Card basic'. #}
+{# TODO: Modify the paragraph type for this component so it includes
+a caption and title fields. #}
+<div class="image-card{{ modifier ? ' ' ~ modifier : '' }}
+  {{- attributes ? ' ' ~ attributes.class -}}"
+  {{- attributes ? attributes|without(class) -}}>
+  <figure class="image-card__image">
+    {{ image }}
+    {% if caption or title %}
+      <figcaption class="image-card__caption">
+        {% if caption %}
+          <div class="caption-text">
+            {{ caption }}
+          </div>
+        {% endif %}
+      {% if title %}
+        {% include "@atoms/title/title.twig" with {
+          "level": title.level,
+          "modifier": title.modifier,
+          "text": title.text,
+          "url": title.url,
+        } only %}
+      {% endif %}
+      </figcaption>
+    {% endif %}
+  </figure>
+</div>

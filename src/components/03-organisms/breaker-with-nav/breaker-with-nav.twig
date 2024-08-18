@@ -1,0 +1,38 @@
+{{ attach_library('almd/breaker-with-nav') }}
+
+<section class="breaker-with-nav{{ modifier ? ' ' ~ modifier }}
+  {{- attributes ? ' ' ~ attributes.class -}}"
+  {{- attributes ? attributes|without(class) -}}>
+  <article class="breaker-with-nav__breaker">
+    <div class="breaker-with-nav__image">
+      {{ image }}
+    </div>
+    <div class="breaker-with-nav__content">
+      {% if title %}
+        {% include "@atoms/title/title.twig" with {
+          "level": title.level,
+          "modifier": title.modifier,
+          "text": title.text,
+          "url": title.url,
+        } only %}
+      {% endif %}
+      {% if subtitle %}
+        {% include "@atoms/title/title.twig" with {
+          "level": subtitle.level,
+          "modifier": subtitle.modifier,
+          "text": subtitle.text,
+          "url": subtitle.url,
+        } only %}
+      {% endif %}
+    </div>
+  </article>
+  <nav class="breaker-with-nav__nav">
+    <ul class="breaker-with-nav__items">
+      {% for item in items %}
+        <li class="breaker-with-nav__item">
+          <a class="breaker-with-nav__link" href="{{ item.url }}">{{ item.text }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </nav>
+</section>

@@ -1,0 +1,36 @@
+.breadcrumb {
+  background-color: var(--color-white);
+  margin: 2rem 0;
+  padding: 10px 0;
+
+  @media (--tablet) {
+    margin: 2rem auto;
+  }
+}
+
+.breadcrumb__items {
+  display: flex;
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+}
+
+.breadcrumb__item {
+  align-items: center;
+  display: flex;
+  font-size: 1.5rem;
+  line-height: 1;
+  margin-right: 10px;
+
+  span {
+    margin-left: 10px;
+  }
+
+  svg {
+    display: inline-block;
+    fill: var(--color-gray);
+    height: auto;
+    width: 7px;
+  }
+}

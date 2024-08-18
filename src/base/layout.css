@@ -1,0 +1,102 @@
+/* Node title. */
+.node__title {
+  margin-block-end: var(--size-40);
+}
+
+/* Spacing for landing pages. */
+.layout-container {
+  margin: 0 var(--size-20);
+
+  @include breakpoint($bp-extreme + 40px) {
+    margin: 0 auto;
+  }
+}
+
+/* All pages left/right spacing. */
+main {
+  margin: 0;
+
+  @media (--tablet-lg) {
+    margin: 0 auto;
+  }
+
+  .layout__width-sidebar-second.layout--twocol-section {
+    display: block;
+
+    /* Size tablet + 40px. */
+    @media (--laptop) {
+      display: grid;
+    }
+  }
+}
+
+/* One column layout. */
+.layout__one-column {
+  margin: 0 auto;
+  max-width: var(--size-laptop);
+}
+
+/* 2 columns layout. */
+.layout__two-column {
+  margin: 0 auto;
+  max-width: var(--size-desktop);
+
+  /* If main content and sidebar are available. */
+  @media (--laptop) {
+    display: grid;
+    grid-gap: var(--size-60);
+    grid-template-columns: 66% 33%;
+
+    /* If no sidebar, expand to full width
+    but max it at 80 characters. */
+    &.layout__two-column--no-sidebar {
+      grid-template-columns: auto;
+      max-width: var(--size-ch-80);
+    }
+  }
+}
+
+/* Layout of document tables like forms or general orders.
+Also same layout for other generic pages like News, Forms. */
+.almd-page-layout {
+  margin: 0;
+  max-width: var(--size-desktop);
+
+  .file-download-link {
+    text-decoration: underline;
+  }
+
+  @media (--tablet) {
+    margin: 0 auto;
+  }
+}
+
+/* Search results list and alerts. */
+.search-results__items,
+.narrow-page-layout {
+  margin: 0 auto;
+  max-width: var(--size-laptop);
+}
+
+/* Login and password reset pages. */
+#user-login-form,
+#user-pass {
+  margin: 6rem auto;
+  max-width: var(--size-laptop);
+}
+
+/* Updates title on news nodes. */
+.news__title--block {
+  .node__title {
+    margin-bottom: var(--size-10);
+  }
+}
+
+.news__cover-image {
+  margin-top: var(--size-20);
+}
+
+.almd__webform--block {
+  margin: 0 auto;
+  max-width: var(--size-tablet);
+}

@@ -1,0 +1,13 @@
+items:
+  -
+    text: 'Home'
+    url: '#'
+  -
+    text: 'About'
+    url: '#'
+  -
+    text: 'Judges'
+    url: '#'
+  -
+    text: 'Learn about our Judges'
+    url: ''

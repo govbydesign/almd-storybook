@@ -1,0 +1,29 @@
+/* Making youtube videos responsive. */
+.embed-video-wrapper {
+  margin: 0 auto 4rem;
+  max-width: 720px;
+
+  /* @media (--laptop) {
+    margin-bottom: 10rem;
+  } */
+
+  .layout__content &,
+  .layout__sidebar--second & {
+    margin-bottom: 2rem;
+  }
+
+  article {
+    height: 0;
+    padding-bottom: 56.25%;
+    position: relative;
+    width: 100%;
+
+    iframe {
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+  }
+}

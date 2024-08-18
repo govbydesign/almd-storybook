@@ -1,0 +1,50 @@
+name: ALMD
+type: theme
+description: 'A clean, accessible, and flexible Drupal front-end theme.'
+alt text: 'Screenshot of ALMD, Drupal front-end theme.'
+package: Core
+core_version_requirement: ^9 || ^10
+base theme: false
+dependencies:
+  - components
+
+# The "libraries-override:" section will allow you to:
+# - Replace an entire library.
+# - Remove an entire library.
+# - Replace an asset in a library with another asset.
+# - Remove an asset from a library.
+libraries-override:
+  system/base:
+    css:
+      component:
+        # Replace one file with another.
+        /core/themes/stable/css/system/components/hidden.module.css: dist/css/hidden.css
+
+libraries:
+  - almd/global
+  - almd/webfonts
+
+components:
+ namespaces:
+    atoms:
+      - src/components/01-atoms
+    molecules:
+      - src/components/02-molecules
+    organisms:
+      - src/components/03-organisms
+    layouts:
+      - src/components/04-layouts
+    pages:
+      - src/components/05-pages
+    templates:
+      - src/templates
+
+regions:
+  alert: Alert
+  search: Search
+  brand: Site Brand
+  top_menu: Top Menu
+  header: Header
+  navigation: Navigation
+  content: Content
+  footer: Footer

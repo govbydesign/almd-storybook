@@ -1,0 +1,69 @@
+.button {
+  background-color: transparent;
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  outline: solid transparent;
+  padding: 0;
+}
+
+/* stylelint-disable selector-no-qualifying-type */
+input[type='submit'],
+.button:not(.button--link) {
+  align-items: center;
+  background-color: var(--color-tertiary);
+  border: solid 1px var(--color-tertiary);
+  color: var(--color-white);
+  display: inline-flex;
+  height: 50px;
+  letter-spacing: 0.1rem;
+  margin: 2px 0;
+  padding: 0.5em 1em;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+
+  .layout__sidebar--second & {
+    margin-bottom: 4rem;
+  }
+
+  &.button--light {
+    background-color: var(--color-white);
+    border-color: var(--color-tertiary);
+    color: var(--color-tertiary);
+
+    &:hover,
+    &:focus {
+      background-color: var(--color-primary);
+      border-color: var(--color-primary);
+      color: var(--color-white);
+    }
+  }
+}
+
+.button--link {
+  color: var(--color-primary);
+}
+
+.button:active {
+  filter: saturate(150%);
+  transform: translateY(1px);
+}
+
+.button:not(.button--link, .button--ghost):hover,
+.button:not(.button--link, .button--ghost):focus {
+  background-color: var(--color-accent-one);
+  border-color: var(--color-accent-one);
+}
+
+.button:focus {
+  box-shadow: 0 0 0 1px var(--color-white), 0 0 0 3px var(--color-accent-one);
+  outline: solid transparent;
+}
+
+.js-focus-visible .button:focus:not(.focus-visible) {
+  box-shadow: none;
+  outline: none;
+}

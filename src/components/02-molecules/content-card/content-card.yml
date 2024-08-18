@@ -1,0 +1,14 @@
+---
+modifier: ''
+title:
+  level: 3
+  modifier: ''
+  text: 'New upcates coming soon to NextGen'
+  url: '#'
+category: 'Court Services'
+body: 'Nullam quis risus eget urna mollis ornare vel eu leo. Cras mattis consectetur purus sit amet fermentum.'
+cta:
+  icon: 'fa-solid fa-arrow-right'
+  modifier: 'button--link'
+  text: 'Read the full article'
+  url: '#'

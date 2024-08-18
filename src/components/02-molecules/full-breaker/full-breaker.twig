@@ -1,0 +1,42 @@
+{{ attach_library('almd/full-breaker') }}
+
+<article class="full-breaker{{ modifier ? ' ' ~ modifier }}
+  {{- attributes ? ' ' ~ attributes.class -}}"
+  {{- attributes ? attributes|without(class) -}}>
+  {{ title_prefix }}
+  {{ title_suffix }}
+  <div class="full-breaker__image">
+    {{ image }}
+  </div>
+  <div class="full-breaker__content">
+    {% if category %}
+      {% include "@atoms/label/label.twig" with {
+        "text": category,
+        "modifier": "label--large",
+      } only %}
+    {% endif %}
+    {% if title %}
+      {% include "@atoms/title/title.twig" with {
+        "level": title.level,
+        "modifier": title.modifier,
+        "text": title.text,
+        "url": title.url,
+      } only %}
+    {% endif %}
+    {% if body %}
+      <div class="full-breaker__body">
+        {{ body }}
+      </div>
+    {% endif %}
+    {% if cta %}
+      <div class="full-breaker__cta">
+        {% include "@atoms/button/button.twig" with {
+          "icon": cta.icon,
+          "modifier": cta.modifier,
+          "text": cta.text,
+          "url": cta.url,
+        } only %}
+      </div>
+    {% endif %}
+  </div>
+</article>

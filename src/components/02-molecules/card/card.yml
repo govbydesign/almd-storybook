@@ -1,0 +1,15 @@
+---
+modifier: ''
+image: '<img src="https://picsum.photos/id/289/420/236" alt="Demo content image" />'
+title:
+  level: 2
+  modifier: ''
+  text: 'How to electronically file a criminal or civil case in ALMD'
+  url: '#'
+date: 'March 16, 2022'
+body: 'Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nulla vitae elit libero, a pharetra augue.'
+cta:
+  icon: 'fa-solid fa-arrow-right'
+  modifier: 'card__cta button--link'
+  text: 'Read the full article'
+  url: '#'

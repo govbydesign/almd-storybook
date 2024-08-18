@@ -1,0 +1,13 @@
+modifier: ''
+image: '<img src="https://picsum.photos/id/134/720/405" alt="placeholder image" />'
+title:
+  level: 2
+  modifier: 'event-split__title'
+  text: 1978
+  url: ''
+body: 'Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Maecenas faucibus mollis interdum. Sed posuere consectetur est at lobortis.'
+cta:
+  icon: 'fa-solid fa-arrow-right'
+  modifier: 'button--link'
+  text: 'Read more'
+  url: '#'

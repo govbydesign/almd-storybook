@@ -1,0 +1,65 @@
+global:
+  css:
+    base:
+      dist/css/global.css: {}
+      dist/css/button.css: {}
+      dist/css/logo.css: {}
+  dependencies:
+    - core/jquery
+    - core/drupalSettings
+    - core/drupal
+
+alert:
+  css:
+    component:
+      dist/css/alert.css: {}
+
+breadcrumb:
+  css:
+    component:
+      dist/css/breadcrumb.css: {}
+
+card:
+  css:
+    component:
+      dist/css/card.css: {}
+
+content-card:
+  css:
+    component:
+      dist/css/content-card.css: {}
+
+event-split:
+  css:
+    component:
+      dist/css/event-split.css: {}
+
+full-breaker:
+  css:
+    component:
+      dist/css/full-breaker.css: {}
+
+image-card:
+  css:
+    component:
+      dist/css/image-card.css: {}
+
+label:
+  css:
+    component:
+      dist/css/label.css: {}
+
+title:
+  css:
+    component:
+      dist/css/title.css: {}
+
+quicklinks:
+  css:
+    component:
+      dist/css/quicklinks.css: {}
+
+webfonts:
+  css:
+    base:
+      'https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap': {}

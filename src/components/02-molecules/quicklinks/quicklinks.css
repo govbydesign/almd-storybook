@@ -1,0 +1,33 @@
+.quicklinks {
+  border-radius: 0 0 5px 5px;
+  box-shadow: var(--shadow-basic);
+
+  .layout__sidebar--second & {
+    margin-bottom: 4rem;
+  }
+
+  .quicklinks__title {
+    align-items: center;
+    background-color: var(--color-primary);
+    border-bottom: 4px solid var(--color-tertiary);
+    color: var(--color-white);
+    display: flex;
+    font-family: var(--font-family-primary);
+    font-size: 1.8rem;
+    justify-content: center;
+    line-height: 1;
+    margin: 0;
+    padding: 1.5rem;
+    text-transform: uppercase;
+  }
+
+  .quicklinks__items {
+    list-style-type: none;
+    margin: 0;
+    padding: 2rem;
+
+    a {
+      display: block;
+    }
+  }
+}

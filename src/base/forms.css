@@ -1,0 +1,160 @@
+input[type='text'],
+input[type='password'],
+input[type='search'],
+input[type='email'],
+input[type='date'],
+input[type='url'],
+input[type='tel'],
+textarea {
+  border: 1px solid var(--color-gray-light);
+  height: 50px;
+  padding: 10px;
+  width: 100%;
+}
+
+textarea {
+  height: unset;
+}
+
+/* Hide default checkbox
+and changes its mensions to remove
+space taken by the actual checkbox */
+input[type='checkbox'],
+input[type='radio'] {
+  height: 1px;
+  opacity: 0;
+  width: 1px;
+}
+
+input[type='checkbox'] + label,
+input[type='radio'] + label  {
+  padding-left: 3rem;
+  position: relative;
+}
+
+/* Draw a box and add borders to it */
+input[type='checkbox'] + label::before {
+  border: 2px solid var(--color-primary);
+  content: '';
+  display: inline-block;
+  height: 2.4rem;
+  left: 0;
+  position: absolute;
+  top: -4px;
+  width: 2.4rem;
+}
+
+/* Draw checkmark */
+input[type='checkbox'] + label::after {
+  border-bottom: 3px solid var(--color-white);
+  border-left: 3px solid var(--color-white);
+  content: '';
+  display: inline-block;
+  height: 1rem;
+  left: 4px;
+  position: absolute;
+  top: 0;
+  transform: rotate(-45deg);
+  width: 1.8rem;
+}
+
+/* Draw a circle and add borders to it */
+input[type='radio'] + label::before {
+  border: 2px solid var(--color-primary);
+  border-radius: 50%;
+  content: '';
+  display: inline-block;
+  height: 2.4rem;
+  left: 0;
+  position: absolute;
+  top: 3px;
+  width: 2.4rem;
+}
+
+/* Draw an inner circle */
+input[type='radio'] + label::after {
+  background-color: var(--color-primary);
+  border-radius: 50%;
+  content: '';
+  display: inline-block;
+  height: 1.6rem;
+  left: 4px;
+  position: absolute;
+  top: 7px;
+  width: 1.6rem;
+}
+
+/* Hide checkmark and inner circle by default */
+input[type='radio'] + label::after,
+input[type='checkbox'] + label::after {
+  content: none;
+}
+
+/* Show checkmark and inner circle when input is checked */
+input[type='radio']:checked + label::after,
+input[type='checkbox']:checked + label::after {
+  content: '';
+}
+
+/* When box is checked, add background color. */
+input[type='checkbox']:checked + label::before {
+  background-color: var(--color-primary);
+  content: '';
+}
+
+/* Add focus styles */
+input[type='radio']:focus + label::before,
+input[type='checkbox']:focus + label::before {
+  outline: rgb(59, 153, 252) auto 5px;
+}
+
+/* Select fields */
+select {
+  height: 50px;
+  padding: 1rem;
+}
+
+/* Form styling for general orders and forms. */
+#views-exposed-form-general-orders-general-orders,
+#views-exposed-form-forms-forms,
+#views-exposed-form-news-news-list,
+#search-block-form,
+#search-block-form--2 {
+  align-items: flex-end;
+  display: flex;
+  margin: 2rem 0;
+
+  label {
+    display: block;
+  }
+
+  select {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+
+/* Align exposed filters form within right content dimensions. */
+#views-exposed-form-news-news-list {
+  margin: 4rem auto;
+  max-width: 120rem;
+}
+
+/* Styles search forms on header and footer. */
+#search-block-form,
+#search-block-form--2 {
+  align-items: center;
+  width: 37.5rem;
+
+  .js-form-type-search {
+    width: 35rem;
+  }
+
+  @media (--tablet) {
+    width: 65rem;
+
+    .js-form-type-search {
+      width: 58rem;
+    }
+  }
+}

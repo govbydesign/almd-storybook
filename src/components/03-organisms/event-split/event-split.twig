@@ -1,0 +1,38 @@
+{{ attach_library('almd/event-split') }}
+
+<section class="event-split{{- modifier ? ' ' ~ modifier -}}
+  {{- attributes ? ' ' ~ attributes.class -}}"
+  {{ attributes ? attributes|without(class) }}>
+  <div class="event-split__image">
+    {{ image }}
+  </div>
+  <div class="event-split__content">
+    <div class="event-split__content--inner">
+      {% if title %}
+        {% include "@atoms/title/title.twig" with {
+          "level": title.level,
+          "modifier": title.modifier,
+          "text": title.text,
+          "url": title.url,
+        } only %}
+      {% endif %}
+
+      {% if body %}
+        <div class="event-split__body">
+          {{ body }}
+        </div>
+      {% endif %}
+
+      {% if cta %}
+        <div class="event-split__cta">
+          {% include "@atoms/button/button.twig" with {
+            "icon": cta.icon,
+            "modifier": cta.modifier,
+            "text": cta.text,
+            "url": cta.url,
+          } only %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</section>

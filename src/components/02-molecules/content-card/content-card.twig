@@ -1,0 +1,38 @@
+{# Content card is formerly Card notice component. #}
+{{ attach_library('almd/content-card') }}
+
+<article class="content-card{{ modifier ? ' ' ~ modifier : '' }}
+  {{- attributes ? ' ' ~ attributes.class }}"
+  {{- attributes ? attributes|without(class) -}}>
+  {{ title_prefix }}
+  {{ title_suffix }}
+  {% if category %}
+    {% include "@atoms/label/label.twig" with {
+      "modifier": "label--gold",
+      "text": category,
+    } only %}
+  {% endif %}
+  {% if title %}
+    {% include "@atoms/title/title.twig" with {
+      "level": title.level,
+      "modifier": title.modifier,
+      "text": title.text,
+      "url": title.url,
+    } only %}
+  {% endif %}
+  {% if body %}
+    <div class="content-card__body">
+      {{ body }}
+    </div>
+  {% endif %}
+  {% if cta %}
+    <div class="content-card__cta">
+      {% include "@atoms/button/button.twig" with {
+        "icon": cta.icon,
+        "modifier": cta.modifier,
+        "text": cta.text,
+        "url": cta.url,
+      } only %}
+    </div>
+  {% endif %}
+</article>
