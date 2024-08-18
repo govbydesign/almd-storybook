@@ -5,11 +5,11 @@
   {{- attributes ? attributes|without(class) -}}>
   {{ title_prefix }}
   {{ title_suffix }}
-  <div class="card__media">
-    {% if image %}
-      {{ image }}
-    {% endif %}
-  </div>
+  {% if image %}
+    <figure class="card__media">
+        {{ image }}
+    </figure>
+  {% endif %}
   <div class="card__content">
     {% if date %}
       {% include "@atoms/label/label.twig" with {

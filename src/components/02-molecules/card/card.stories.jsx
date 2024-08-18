@@ -12,4 +12,14 @@ export const CardDefault = {
   args: { ...data },
 };
 
+export const CardNoImage = {
+  ...CardDefault,
+  name: 'Card without image',
+  render: (args) => parse(card(args)),
+  args: {
+    ...data,
+    image: '',
+  },
+};
+
 export default component;

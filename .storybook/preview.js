@@ -15,6 +15,8 @@ setupFilters(Twig);
 const preview = {
   parameters: {
     controls: {
+      // Hides the Addons panel for each story.
+      disabled: true,
       matchers: {
         color: /(background|color)$/i,
         date: /Date$/i,

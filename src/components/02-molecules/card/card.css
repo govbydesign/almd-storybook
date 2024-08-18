@@ -24,6 +24,10 @@
     width: 100px;
   }
 
+  figure {
+    margin: 0;
+  }
+
   .title {
     line-height: 1.3;
 
