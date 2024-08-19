@@ -23,8 +23,8 @@ const preview = {
       },
     },
   },
-
-  tags: ['autodocs']
+  // Hides autodocs globally.
+  tags: ['!autodocs'],
 };
 
 export default preview;
