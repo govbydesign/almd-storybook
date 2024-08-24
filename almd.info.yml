@@ -20,6 +20,12 @@ libraries-override:
         # Replace one file with another.
         /core/themes/stable/css/system/components/hidden.module.css: dist/css/hidden.css
 
+# Extends library to override Drupal messages to fix bug:
+# https://www.drupal.org/project/uswds_base/issues/3465493
+libraries-extend:
+  core/drupal.message:
+    - almd/drupal.message
+
 libraries:
   - almd/global
   - almd/webfonts

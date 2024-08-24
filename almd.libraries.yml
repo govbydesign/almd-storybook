@@ -29,6 +29,15 @@ content-card:
     component:
       dist/css/content-card.css: {}
 
+# Overrides Drupal messages to solve issue in 10.3.
+# https://www.drupal.org/project/uswds_base/issues/3465493
+drupal.message:
+  version: VERSION
+  js:
+    dist/js/messages.js: {}
+  dependencies:
+    - almd/messages
+
 event-split:
   css:
     component:
@@ -48,6 +57,11 @@ label:
   css:
     component:
       dist/css/label.css: {}
+
+messages:
+  css:
+    component:
+      dist/css/messages.css: {}
 
 title:
   css:
