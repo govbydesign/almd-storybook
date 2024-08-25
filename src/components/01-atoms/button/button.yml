@@ -1,5 +1,5 @@
 ---
 modifier: ''
-icon: 'fa-solid fa-arrow-right'
+icon: 'fa-solid fa-arrow-right fa-xs'
 text: 'Button'
 url: '#'

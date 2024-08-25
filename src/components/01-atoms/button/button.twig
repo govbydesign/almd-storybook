@@ -3,18 +3,14 @@
     {{ text }}
     {# Using a twig block to be able to add an icon as needed. #}
     {% if icon %}
-      <span aria-hidden="true">
-        <i class="{{ icon }}"></i>
-      </span>
+      <i class="button__icon {{ icon }}"></i>
     {% endif %}
   </a>
 {% else %}
   <button class="button{{ modifier ? ' ' ~ modifier: '' }}">
     {{ text }}
     {% if icon %}
-      <span aria-hidden="true">
-        <i class="{{ icon }}"></i>
-      </span>
+      <i class="button__icon {{ icon }}"></i>
     {% endif %}
   </button>
 {% endif %}
