@@ -9,7 +9,7 @@ title:
 date: 'March 16, 2022'
 body: 'Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nulla vitae elit libero, a pharetra augue.'
 cta:
-  icon: 'fa-solid fa-arrow-right'
+  icon: 'fa-solid fa-arrow-right fa-xs'
   modifier: 'card__cta button--link'
   text: 'Read the full article'
   url: '#'

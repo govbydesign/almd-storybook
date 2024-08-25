@@ -8,7 +8,7 @@ title:
 category: 'Court Services'
 body: 'Nullam quis risus eget urna mollis ornare vel eu leo. Cras mattis consectetur purus sit amet fermentum.'
 cta:
-  icon: 'fa-solid fa-arrow-right'
+  icon: 'fa-solid fa-arrow-right fa-xs'
   modifier: 'button--link'
   text: 'Read the full article'
   url: '#'
