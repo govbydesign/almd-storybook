@@ -10,7 +10,7 @@
           <a class="breadcrumb__link" href="{{ item.url }}">
             {{ item.text }}
           </a>
-          <i class="fa-solid fa-chevron-right fa-xs"></i>
+          <span class="breadcrumb__separator">{{ '/' }}</span>
         {% else %}
           {{ item.text }}
         {% endif %}

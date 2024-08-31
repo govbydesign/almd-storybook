@@ -10,6 +10,7 @@
 
 .breadcrumb__items {
   display: flex;
+  flex-wrap: wrap;
   list-style-type: none;
   margin: 0 auto;
   padding: 0;
@@ -19,20 +20,15 @@
 .breadcrumb__item {
   align-items: center;
   display: flex;
-  font-size: var(--size-15);
+  font-size: var(--size-14);
   line-height: 1;
+}
 
-  span {
-    margin-inline-start: var(--size-10);
-  }
+.breadcrumb__separator {
+  display: inline-block;
+  margin-inline: var(--size-6);
 
-  .fa-chevron-right {
-    display: inline-block;
-    margin-inline: var(--size-4);
-    width: var(--size-7);
-
-    @media (--tablet) {
-      margin-inline: var(--size-8);
-    }
+  @media (--tablet) {
+    margin-inline: var(--size-8);
   }
 }
