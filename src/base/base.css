@@ -220,7 +220,7 @@ h6 {
   color: var(--color-primary);
   font-family: var(--font-family-secondary);
   font-weight: 300;
-  margin: 0 0 1rem;
+  margin: 0;
 
   a {
     color: var(--color-primary);

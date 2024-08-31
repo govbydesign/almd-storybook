@@ -36,6 +36,8 @@
   --size-56: 5.6rem; /* 56px */
   --size-58: 5.8rem; /* 58px */
   --size-60: 6rem; /* 60px */
+  --size-100: 10rem; /* 100px */
+  --size-420: 42rem; /* 420px */
 
 /* Incremental sizes in characters (ch) units. */
   --size-ch-20: 20ch;

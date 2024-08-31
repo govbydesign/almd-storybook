@@ -12,7 +12,6 @@
   cursor: pointer;
   display: flex;
   font: inherit;
-  font-size: var(--size-14);
   outline: none;
   padding: 0;
 }
@@ -24,6 +23,7 @@ input[type='submit'],
   border: solid 1px transparent;
   color: var(--color-white);
   display: inline-flex;
+  font-size: var(--size-14);
   height: var(--size-48);
   justify-content: space-between;
   letter-spacing: 0.1rem;
