@@ -13,10 +13,6 @@
     margin: 0;
   }
 
-  @media (--tablet) {
-    margin-block-end: var(--size-40);
-  }
-
   a {
     color: var(--color-white);
     text-decoration: none;
@@ -39,12 +35,10 @@
 
 .alert__icon {
   align-items: center;
-  border: 1px solid var(--white);
-  border-radius: 50%;
-  display: grid;
-  height: var(--size-28);
+  display: flex;
+  font-size: var(--size-24);
+  justify-content: center;
   text-align: center;
-  width: var(--size-28);
 }
 
 /* Alerts teaser list. */

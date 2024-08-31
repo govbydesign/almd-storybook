@@ -7,6 +7,7 @@
   --color-primary: #23272b;
   --color-secondary: #717478;
   --color-tertiary: #bd8461;
+  --color-primary-blue: #0f62fe;
 
 
   /* Accent. */
@@ -15,6 +16,7 @@
   --color-accent-three: #a7a7a7;
   --color-accent-four: #dadada;
   --color-accent-five: #e74c3c;
+  --color-accent-darker-blue: #0050e6;
 
   /* Grays. */
   --color-gray: #343d46;
