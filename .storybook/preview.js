@@ -1,4 +1,5 @@
 /** @type { import('@storybook/react').Preview } */
+import { themes } from '@storybook/theming';
 import Twig from 'twig';
 import drupalFilters from 'twig-drupal-filters';
 import '../src/styles.css';
@@ -14,6 +15,9 @@ setupFilters(Twig);
 
 const preview = {
   parameters: {
+    docs: {
+      theme: themes.dark,
+    },
     controls: {
       // Hides the Addons panel for each story.
       disabled: true,
