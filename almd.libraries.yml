@@ -19,6 +19,11 @@ breadcrumb:
     component:
       dist/css/breadcrumb.css: {}
 
+breaker:
+  css:
+    component:
+      dist/css/breaker.css: {}
+
 card:
   css:
     component:
@@ -42,11 +47,6 @@ event-split:
   css:
     component:
       dist/css/event-split.css: {}
-
-full-breaker:
-  css:
-    component:
-      dist/css/full-breaker.css: {}
 
 image-card:
   css:

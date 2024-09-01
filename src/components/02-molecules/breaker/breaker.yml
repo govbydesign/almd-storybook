@@ -12,3 +12,8 @@ cta:
   modifier: ''
   text: Visit Oral Histories
   url: '#'
+cta2:
+  icon: ''
+  modifier: ''
+  text: View our events timelines
+  url: '#'
